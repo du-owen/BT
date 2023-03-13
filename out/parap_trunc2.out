@@ -1,0 +1,71 @@
+Running on host: tikgpu01
+In directory: /itet-stor/owendu/net_scratch/Paraphrase
+Starting on: Tue Mar 7 14:43:38 CET 2023
+SLURM_JOB_ID: 606747
+Found cached dataset text (/home/owendu/transformers_cache/text/default-cdc8ff16a5f3ca7c/0.0.0/cb1e9bd71a82ad27976be3b12b407850fe2837d80c22c5e03a28949843a8ace2)
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 449.60it/s]
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+Traceback (most recent call last):
+  File "/usr/itetnas04/data-scratch-01/owendu/data/Paraphrase/paraphrase_trunc.py", line 15, in <module>
+    completion = openai.ChatCompletion.create(
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.9/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.9/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.9/site-packages/openai/api_requestor.py", line 226, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.9/site-packages/openai/api_requestor.py", line 619, in _interpret_response
+    self._interpret_response_line(
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.9/site-packages/openai/api_requestor.py", line 679, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.APIError: Internal server error {
+    "error": {
+        "message": "Internal server error",
+        "type": "auth_subrequest_error",
+        "param": null,
+        "code": "internal_error"
+    }
+}
+ 500 {'error': {'message': 'Internal server error', 'type': 'auth_subrequest_error', 'param': None, 'code': 'internal_error'}} {'Date': 'Tue, 07 Mar 2023 13:55:49 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '166', 'Connection': 'keep-alive', 'Vary': 'Origin', 'X-Request-Id': '7b9aca4c59d12be083012421e948b055', 'Strict-Transport-Security': 'max-age=15724800; includeSubDomains'}
+srun: error: tikgpu01: task 0: Exited with exit code 1
+srun: launch/slurm: _step_signal: Terminating StepId=606747.0

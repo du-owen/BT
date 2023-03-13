@@ -1,0 +1,26 @@
+Running on host: tikgpu01
+In directory: /itet-stor/owendu/net_scratch/Paraphrase
+Starting on: Sat Mar 4 18:09:31 CET 2023
+SLURM_JOB_ID: 606443
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\n\n1. South Australia holds a distinctive place in Australia's past due to its origin as a self-governing territory, unlike the other states that were formed as colonies.\n2. Unlike the other Australian states, which were established as colonies, South Australia began as an independent province, giving it a unique position in history.\n3. The history of South Australia varies from the other states because it began as a self-ruling province rather than a colony.\n4. South Australia's historical position differs from the other states due to its foundation as a self-governed province instead of a colony.\n5. South Australia distinguishes itself from the other Australian states as it was founded as a self-governing province rather than a colony.\n6. Unlike the other states that were established as colonies, South Australia's unique beginning as an independent province makes it stand out in history. \n7. South Australia's origin as a self-governing province sets it apart from the other states in Australia, who began as colonies. \n8. South Australia's autonomous province status sets it apart from the other Australian states that were formed as colonies. \n9. South Australia takes a special place in Australia's history as it started as a self-governing province rather than a colony like the other states. \n10. Unlike the other states that were created as colonies, South Australia's self-governing origins set it apart in history. \n11. South Australia originated as an independent province, separating it from the other Australian states that began as colonies.\n12. South Australia has a unique history compared to the other states in Australia because it was founded as a self-governed province. \n13. South Australia began its journey as a self-governing province, distinguishing itself from the other states that were established as colonies. \n14. South Australia holds a remarkable place in Australian history since it was initially established as a self-governing territory rather than a colony. \n15. Unlike the other states that originated as colonies, South Australia has a distinct legacy as a self-governing province. \n16. The history of South Australia sets it apart from the other states as it began as a self-ruling province rather than a colony. \n17. South Australia started its journey as a self-ruling province, giving it a significant place in the history of Australia. \n18. South Australia is unique in Australia's history as it began as an autonomous province, unlike the other states that began as colonies. \n19. Unlike the other states that emerged as colonies, South Australia began as an independent province, setting it apart in the history of Australia.\n20. South Australia's distinctive position in Australian history stems from its foundation as a self-governing territory instead of a colony like the other states.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1677949775,
+  "id": "chatcmpl-6qPfzEe8LevcAQClaC0eqDaKo7wdD",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 562,
+    "prompt_tokens": 54,
+    "total_tokens": 616
+  }
+}
+finished at: Sat Mar 4 18:09:52 CET 2023
