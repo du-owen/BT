@@ -5,12 +5,12 @@ import math
 import logging
 
 """
-sent_tokenize, and then only take sentences that don't contain \n
+more similar to SimCSE, take a few consecutive sentences from every article
 """
 
 # Shape (6458670, 4)
 ds = load_dataset("wikipedia", "20220301.en")
-f = open("wiki_datasets/wiki2/wiki2_2.txt","w")
+f = open("wiki_datasets/wiki3/wiki3_2.txt","w")
 
 logging.basicConfig(filename='out/cur2.log', level = logging.DEBUG)
 
@@ -25,38 +25,35 @@ while True:
         logging.info("check")
 
     # pick random article out of dataset
-    # iterate until we have an article with more than 10 sentences (in short articles more than half the sentences might be not sentences but references etc.)
+    # iterate until we have an article with more than 20 sentences (in short articles more than half the sentences might be not sentences but references etc.)
+    # 20 instead of 10 like in other methods because here we take 4 sentences per article
     while True:
         index = random.randrange(6458670)
         sents = sent_tokenize(ds['train'][index]['text'],language='english')
-        if (len(sents) >= 10):
+        if (len(sents) >= 20):
             break
     
-    # pick random sentence in chosen article
+    # pick first 4 sentence in chosen article (not containing line breaks)
     # iterate until we have a sentence with word count of 10 to 50, only take sentences without line breaks
-    # if there is no such sentence we break out of loop and try another article
-    found = False
+    # if can't find 4 sentences then break and check other articles
+    found = 0
     tries = 0
-
-    while not found:
-        
-        sindex = random.randrange(math.floor(len(sents)*0.6))
+    sindex = 0
+    while found < 4:
 
         words = word_tokenize(sents[sindex])
 
-        if len(words) > 10 and len(words) < 50:
-            if "\n" not in sents[sindex]:
-                f.write(sents[sindex])
-                f.write("\n")
-                found = True
-                c += 1
-        
-        tries += 1
+        if len(words) > 10 and len(words) < 50 and "\n" not in sents[sindex]:
+            f.write(sents[sindex])
+            f.write("\n")
+            found += 1
+            c += 1
+        sindex += 1
 
-        if tries > 50:
+        if sindex == len(sents):
             break
 
-    if c == 1000000:
+    if c >= 1000000:
         break
 
 f.close()
