@@ -1,0 +1,25 @@
+Running on host: tikgpu01
+In directory: /itet-stor/owendu/net_scratch/Paraphrase
+Starting on: Tue Mar 14 23:06:44 CET 2023
+SLURM_JOB_ID: 607805
+Found cached dataset wikipedia (/itet-stor/owendu/net_scratch/cache/wikipedia/20220301.en/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559)
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 14.02it/s]
+Fatal error condition occurred in /opt/vcpkg/buildtrees/aws-c-io/src/9e6648842a-364b708815.clean/source/event_loop.c:72: aws_thread_launch(&cleanup_thread, s_event_loop_destroy_async_thread_fn, el_group, &thread_options) == AWS_OP_SUCCESS
+Exiting Application
+################################################################################
+Stack trace:
+################################################################################
+/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/pyarrow/libarrow.so.900(+0x200af06) [0x7fddea54af06]
+/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/pyarrow/libarrow.so.900(+0x20028e5) [0x7fddea5428e5]
+/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/pyarrow/libarrow.so.900(+0x1f27e09) [0x7fddea467e09]
+/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/pyarrow/libarrow.so.900(+0x200ba3d) [0x7fddea54ba3d]
+/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/pyarrow/libarrow.so.900(+0x1f25948) [0x7fddea465948]
+/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/pyarrow/libarrow.so.900(+0x200ba3d) [0x7fddea54ba3d]
+/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/pyarrow/libarrow.so.900(+0x1ee0b46) [0x7fddea420b46]
+/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/pyarrow/libarrow.so.900(+0x194546a) [0x7fdde9e8546a]
+/lib/x86_64-linux-gnu/libc.so.6(+0x39ebc) [0x7fddebaa6ebc]
+/lib/x86_64-linux-gnu/libc.so.6(+0x39fea) [0x7fddebaa6fea]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf2) [0x7fddeba910a2]
+/itet-stor/owendu/net_scratch/miniconda3/envs/env/bin/python() [0x579c8d]
+srun: error: tikgpu01: task 0: Aborted
+srun: launch/slurm: _step_signal: Terminating StepId=607805.0

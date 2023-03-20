@@ -10,7 +10,7 @@ sent_tokenize, and then only take sentences that don't contain \n
 
 # Shape (6458670, 4)
 ds = load_dataset("wikipedia", "20220301.en")
-f = open("wiki_datasets/wiki2/wiki2_2.txt","w")
+f = open("wiki_datasets/wiki2/wiki2_3.txt","w")
 
 logging.basicConfig(filename='out/cur2.log', level = logging.DEBUG)
 

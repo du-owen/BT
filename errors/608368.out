@@ -1,0 +1,77 @@
+Running on host: tikgpu03
+In directory: /itet-stor/owendu/net_scratch/Paraphrase
+Starting on: Sun Mar 19 22:52:50 CET 2023
+SLURM_JOB_ID: 608368
+Downloading and preparing dataset text/default to /home/owendu/transformers_cache/text/default-fa9213253b1dfcfe/0.0.0/cb1e9bd71a82ad27976be3b12b407850fe2837d80c22c5e03a28949843a8ace2...
+Downloading data files:   0%|          | 0/1 [00:00<?, ?it/s]Downloading data files: 100%|██████████| 1/1 [00:00<00:00, 1950.84it/s]
+Extracting data files:   0%|          | 0/1 [00:00<?, ?it/s]Extracting data files: 100%|██████████| 1/1 [00:00<00:00, 60.34it/s]
+Dataset text downloaded and prepared to /home/owendu/transformers_cache/text/default-fa9213253b1dfcfe/0.0.0/cb1e9bd71a82ad27976be3b12b407850fe2837d80c22c5e03a28949843a8ace2. Subsequent calls will reuse this data.
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 100 examples [00:00, 350.08 examples/s]                                                                 0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 241.69it/s]
+Traceback (most recent call last):
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/urllib3/connectionpool.py", line 449, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/urllib3/connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/http/client.py", line 1348, in getresponse
+    response.begin()
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/http/client.py", line 316, in begin
+    version, status, reason = self._read_status()
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/http/client.py", line 277, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/ssl.py", line 1241, in recv_into
+    return self.read(nbytes, buffer)
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/ssl.py", line 1099, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/urllib3/util/retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/urllib3/packages/six.py", line 770, in reraise
+    raise value
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/urllib3/connectionpool.py", line 451, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/urllib3/connectionpool.py", line 340, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read timeout=600)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/openai/api_requestor.py", line 516, in request_raw
+    result = _thread_context.session.request(
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/requests/adapters.py", line 578, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read timeout=600)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "paraphrase_trunc.py", line 36, in <module>
+    completion = openai.ChatCompletion.create(
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/openai/api_requestor.py", line 216, in request
+    result = self.request_raw(
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/openai/api_requestor.py", line 526, in request_raw
+    raise error.Timeout("Request timed out: {}".format(e)) from e
+openai.error.Timeout: Request timed out: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read timeout=600)
+srun: error: tikgpu03: task 0: Exited with exit code 1
+srun: launch/slurm: _step_signal: Terminating StepId=608368.0

@@ -1,0 +1,123 @@
+Running on host: tikgpu03
+In directory: /itet-stor/owendu/net_scratch/SimCSE/SimCSE
+Starting on: Thu Mar 16 18:20:08 CET 2023
+SLURM_JOB_ID: 608128
+Some weights of BertModel were not initialized from the model checkpoint at /itet-stor/owendu/net_scratch/SimCSE/SimCSE/result/my-unsup-simcse-wiki-new-2 and are newly initialized: ['bert.pooler.dense.weight', 'bert.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+2023-03-16 18:20:26,511 : ***** Transfer task : STS12 *****
+
+
+/usr/itetnas04/data-scratch-01/owendu/data/SimCSE/SimCSE/./SentEval/senteval/sts.py:42: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  sent1 = np.array([s.split() for s in sent1])[not_empty_idx]
+/usr/itetnas04/data-scratch-01/owendu/data/SimCSE/SimCSE/./SentEval/senteval/sts.py:43: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  sent2 = np.array([s.split() for s in sent2])[not_empty_idx]
+2023-03-16 18:20:28,294 : MSRpar : pearson = 0.5998, spearman = 0.6101
+2023-03-16 18:20:28,961 : MSRvid : pearson = 0.8262, spearman = 0.8221
+2023-03-16 18:20:29,510 : SMTeuroparl : pearson = 0.4834, spearman = 0.5953
+2023-03-16 18:20:30,564 : surprise.OnWN : pearson = 0.6994, spearman = 0.6706
+2023-03-16 18:20:31,112 : surprise.SMTnews : pearson = 0.6728, spearman = 0.5943
+2023-03-16 18:20:31,115 : ALL : Pearson = 0.7100,             Spearman = 0.6493
+2023-03-16 18:20:31,115 : ALL (weighted average) : Pearson = 0.6706,             Spearman = 0.6717
+2023-03-16 18:20:31,116 : ALL (average) : Pearson = 0.6563,             Spearman = 0.6585
+
+2023-03-16 18:20:31,118 : ***** Transfer task : STS13 (-SMT) *****
+
+
+2023-03-16 18:20:31,632 : FNWN : pearson = 0.5547, spearman = 0.5656
+2023-03-16 18:20:32,392 : headlines : pearson = 0.7716, spearman = 0.7736
+2023-03-16 18:20:32,975 : OnWN : pearson = 0.8091, spearman = 0.8023
+2023-03-16 18:20:32,977 : ALL : Pearson = 0.7795,             Spearman = 0.7856
+2023-03-16 18:20:32,978 : ALL (weighted average) : Pearson = 0.7583,             Spearman = 0.7581
+2023-03-16 18:20:32,978 : ALL (average) : Pearson = 0.7118,             Spearman = 0.7139
+
+2023-03-16 18:20:32,979 : ***** Transfer task : STS14 *****
+
+
+2023-03-16 18:20:33,561 : deft-forum : pearson = 0.4319, spearman = 0.4186
+2023-03-16 18:20:34,180 : deft-news : pearson = 0.7744, spearman = 0.7465
+2023-03-16 18:20:35,017 : headlines : pearson = 0.7694, spearman = 0.7495
+2023-03-16 18:20:35,837 : images : pearson = 0.7831, spearman = 0.7513
+2023-03-16 18:20:36,698 : OnWN : pearson = 0.8579, spearman = 0.8455
+2023-03-16 18:20:37,795 : tweet-news : pearson = 0.7572, spearman = 0.6853
+2023-03-16 18:20:37,798 : ALL : Pearson = 0.7337,             Spearman = 0.6967
+2023-03-16 18:20:37,799 : ALL (weighted average) : Pearson = 0.7473,             Spearman = 0.7163
+2023-03-16 18:20:37,799 : ALL (average) : Pearson = 0.7290,             Spearman = 0.6995
+
+2023-03-16 18:20:37,801 : ***** Transfer task : STS15 *****
+
+
+2023-03-16 18:20:38,559 : answers-forums : pearson = 0.7352, spearman = 0.7370
+2023-03-16 18:20:39,412 : answers-students : pearson = 0.7529, spearman = 0.7632
+2023-03-16 18:20:40,189 : belief : pearson = 0.7882, spearman = 0.8099
+2023-03-16 18:20:41,081 : headlines : pearson = 0.8004, spearman = 0.8045
+2023-03-16 18:20:41,990 : images : pearson = 0.8183, spearman = 0.8234
+2023-03-16 18:20:41,993 : ALL : Pearson = 0.7852,             Spearman = 0.7926
+2023-03-16 18:20:41,993 : ALL (weighted average) : Pearson = 0.7833,             Spearman = 0.7911
+2023-03-16 18:20:41,993 : ALL (average) : Pearson = 0.7790,             Spearman = 0.7876
+
+2023-03-16 18:20:41,995 : ***** Transfer task : STS16 *****
+
+
+2023-03-16 18:20:42,367 : answer-answer : pearson = 0.6800, spearman = 0.6814
+2023-03-16 18:20:42,629 : headlines : pearson = 0.7916, spearman = 0.8053
+2023-03-16 18:20:42,968 : plagiarism : pearson = 0.7966, spearman = 0.8063
+2023-03-16 18:20:43,523 : postediting : pearson = 0.8657, spearman = 0.8764
+2023-03-16 18:20:43,776 : question-question : pearson = 0.6621, spearman = 0.6535
+2023-03-16 18:20:43,779 : ALL : Pearson = 0.7466,             Spearman = 0.7557
+2023-03-16 18:20:43,780 : ALL (weighted average) : Pearson = 0.7611,             Spearman = 0.7668
+2023-03-16 18:20:43,781 : ALL (average) : Pearson = 0.7592,             Spearman = 0.7646
+
+2023-03-16 18:20:43,783 : 
+
+***** Transfer task : STSBenchmark*****
+
+
+2023-03-16 18:20:52,618 : train : pearson = 0.7641, spearman = 0.7409
+2023-03-16 18:20:55,183 : dev : pearson = 0.8031, spearman = 0.8065
+2023-03-16 18:20:57,389 : test : pearson = 0.7552, spearman = 0.7431
+2023-03-16 18:20:57,395 : ALL : Pearson = 0.7707,             Spearman = 0.7567
+2023-03-16 18:20:57,395 : ALL (weighted average) : Pearson = 0.7694,             Spearman = 0.7526
+2023-03-16 18:20:57,395 : ALL (average) : Pearson = 0.7741,             Spearman = 0.7635
+
+2023-03-16 18:20:57,400 : 
+
+***** Transfer task : SICKRelatedness*****
+
+
+2023-03-16 18:21:03,094 : train : pearson = 0.7785, spearman = 0.7011
+2023-03-16 18:21:03,807 : dev : pearson = 0.7606, spearman = 0.7101
+2023-03-16 18:21:09,924 : test : pearson = 0.7691, spearman = 0.6911
+2023-03-16 18:21:09,930 : ALL : Pearson = 0.7730,             Spearman = 0.6966
+2023-03-16 18:21:09,930 : ALL (weighted average) : Pearson = 0.7729,             Spearman = 0.6966
+2023-03-16 18:21:09,930 : ALL (average) : Pearson = 0.7694,             Spearman = 0.7008
+
+------ test ------
++-------+-------+-------+-------+-------+--------------+-----------------+-------+
+| STS12 | STS13 | STS14 | STS15 | STS16 | STSBenchmark | SICKRelatedness |  Avg. |
++-------+-------+-------+-------+-------+--------------+-----------------+-------+
+| 64.93 | 78.56 | 69.67 | 79.26 | 75.57 |    74.31     |      69.11      | 73.06 |
++-------+-------+-------+-------+-------+--------------+-----------------+-------+
++------+------+------+------+------+------+------+------+
+|  MR  |  CR  | SUBJ | MPQA | SST2 | TREC | MRPC | Avg. |
++------+------+------+------+------+------+------+------+
+| 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
++------+------+------+------+------+------+------+------+
+Fatal error condition occurred in /opt/vcpkg/buildtrees/aws-c-io/src/9e6648842a-364b708815.clean/source/event_loop.c:72: aws_thread_launch(&cleanup_thread, s_event_loop_destroy_async_thread_fn, el_group, &thread_options) == AWS_OP_SUCCESS
+Exiting Application
+################################################################################
+Stack trace:
+################################################################################
+/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/pyarrow/libarrow.so.900(+0x200af06) [0x7faacfc2ef06]
+/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/pyarrow/libarrow.so.900(+0x20028e5) [0x7faacfc268e5]
+/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/pyarrow/libarrow.so.900(+0x1f27e09) [0x7faacfb4be09]
+/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/pyarrow/libarrow.so.900(+0x200ba3d) [0x7faacfc2fa3d]
+/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/pyarrow/libarrow.so.900(+0x1f25948) [0x7faacfb49948]
+/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/pyarrow/libarrow.so.900(+0x200ba3d) [0x7faacfc2fa3d]
+/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/pyarrow/libarrow.so.900(+0x1ee0b46) [0x7faacfb04b46]
+/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/pyarrow/libarrow.so.900(+0x194546a) [0x7faacf56946a]
+/lib/x86_64-linux-gnu/libc.so.6(+0x39ebc) [0x7fabfcc28ebc]
+/lib/x86_64-linux-gnu/libc.so.6(+0x39fea) [0x7fabfcc28fea]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf2) [0x7fabfcc130a2]
+/itet-stor/owendu/net_scratch/miniconda3/envs/env/bin/python() [0x579c8d]
+srun: error: tikgpu03: task 0: Aborted
+srun: launch/slurm: _step_signal: Terminating StepId=608128.0

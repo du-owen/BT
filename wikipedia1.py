@@ -11,7 +11,7 @@ method: remove "\n" from the text first and then sent_tokenize
 
 # Shape (6458670, 4)
 ds = load_dataset("wikipedia", "20220301.en")
-f = open("wiki_datasets/wiki1/wiki1_2.txt","w")
+f = open("wiki_datasets/wiki1/wiki1_3.txt","w")
 
 logging.basicConfig(filename='out/cur2.log', level = logging.DEBUG)
 

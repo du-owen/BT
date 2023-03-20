@@ -1,0 +1,106 @@
+Running on host: tikgpu02
+In directory: /itet-stor/owendu/net_scratch/Paraphrase
+Starting on: Mon Mar 20 00:15:55 CET 2023
+SLURM_JOB_ID: 608372
+Found cached dataset text (/home/owendu/transformers_cache/text/default-fa9213253b1dfcfe/0.0.0/cb1e9bd71a82ad27976be3b12b407850fe2837d80c22c5e03a28949843a8ace2)
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 492.00it/s]
+Traceback (most recent call last):
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/urllib3/connectionpool.py", line 449, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/urllib3/connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/http/client.py", line 1348, in getresponse
+    response.begin()
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/http/client.py", line 316, in begin
+    version, status, reason = self._read_status()
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/http/client.py", line 277, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/ssl.py", line 1241, in recv_into
+    return self.read(nbytes, buffer)
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/ssl.py", line 1099, in read
+    return self._sslobj.read(len, buffer)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/urllib3/util/retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/urllib3/connectionpool.py", line 449, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/urllib3/connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/http/client.py", line 1348, in getresponse
+    response.begin()
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/http/client.py", line 316, in begin
+    version, status, reason = self._read_status()
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/http/client.py", line 277, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/ssl.py", line 1241, in recv_into
+    return self.read(nbytes, buffer)
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/ssl.py", line 1099, in read
+    return self._sslobj.read(len, buffer)
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/openai/api_requestor.py", line 516, in request_raw
+    result = _thread_context.session.request(
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/requests/adapters.py", line 547, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "paraphrase_trunc.py", line 38, in <module>
+    completion = openai.ChatCompletion.create(
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/openai/api_requestor.py", line 216, in request
+    result = self.request_raw(
+  File "/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/openai/api_requestor.py", line 528, in request_raw
+    raise error.APIConnectionError(
+openai.error.APIConnectionError: Error communicating with OpenAI: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+Fatal error condition occurred in /opt/vcpkg/buildtrees/aws-c-io/src/9e6648842a-364b708815.clean/source/event_loop.c:72: aws_thread_launch(&cleanup_thread, s_event_loop_destroy_async_thread_fn, el_group, &thread_options) == AWS_OP_SUCCESS
+Exiting Application
+################################################################################
+Stack trace:
+################################################################################
+/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/pyarrow/libarrow.so.900(+0x200af06) [0x7f2e066dbf06]
+/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/pyarrow/libarrow.so.900(+0x20028e5) [0x7f2e066d38e5]
+/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/pyarrow/libarrow.so.900(+0x1f27e09) [0x7f2e065f8e09]
+/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/pyarrow/libarrow.so.900(+0x200ba3d) [0x7f2e066dca3d]
+/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/pyarrow/libarrow.so.900(+0x1f25948) [0x7f2e065f6948]
+/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/pyarrow/libarrow.so.900(+0x200ba3d) [0x7f2e066dca3d]
+/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/pyarrow/libarrow.so.900(+0x1ee0b46) [0x7f2e065b1b46]
+/itet-stor/owendu/net_scratch/miniconda3/envs/env/lib/python3.8/site-packages/pyarrow/libarrow.so.900(+0x194546a) [0x7f2e0601646a]
+/lib/x86_64-linux-gnu/libc.so.6(+0x39ebc) [0x7f2e07c37ebc]
+/lib/x86_64-linux-gnu/libc.so.6(+0x39fea) [0x7f2e07c37fea]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf2) [0x7f2e07c220a2]
+/itet-stor/owendu/net_scratch/miniconda3/envs/env/bin/python() [0x579c8d]
+srun: error: tikgpu02: task 0: Aborted
+srun: launch/slurm: _step_signal: Terminating StepId=608372.0

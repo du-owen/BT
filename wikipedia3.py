@@ -10,7 +10,7 @@ more similar to SimCSE, take a few consecutive sentences from every article
 
 # Shape (6458670, 4)
 ds = load_dataset("wikipedia", "20220301.en")
-f = open("wiki_datasets/wiki3/wiki3_2.txt","w")
+f = open("wiki_datasets/wiki3/wiki3_3.txt","w")
 
 logging.basicConfig(filename='out/cur2.log', level = logging.DEBUG)
 
