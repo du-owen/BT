@@ -24,9 +24,11 @@ for i in range(len(sents)):
     orig = dataset["train"][i]["text"]
     paraphrases = sents[i][:5]
 
-    # Evaluate every paraphrase of a given sentence
+    # Calculate similarity and normalize values
     sims = model.similarity([orig],paraphrases)[0]
     sims = list(map(lambda x:(x+1)/2,np.array(sims)))
+
+    # Calculate bleu score
     refs = list(map(lambda x:word_tokenize(x),paraphrases))
     chencherry = SmoothingFunction()
     bleus = sentence_bleu(refs, word_tokenize(orig),smoothing_function=chencherry.method1)
