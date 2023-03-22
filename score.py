@@ -7,17 +7,19 @@ import numpy as np
 
 model = SimCSE("princeton-nlp/sup-simcse-roberta-large")
 
-file = open("parap_trunc1.json","r")
+file = open("parap_trunc2.json","r")
 j = file.read()
 sents = json.loads(j)
 
-wfile = open("parap_scores1.json","w")
+wfile = open("parap_scores2.json","w")
 wfile.write("{\"scores\":")
 wfile.write("[")
 
 dataset = load_dataset("text", data_files="wiki_trunc_new.txt", cache_dir="~/transformers_cache")
 
 totalavg = 0
+totalbleu = 0
+totalsim = 0
 
 for i in range(len(sents)):
 
@@ -37,6 +39,8 @@ for i in range(len(sents)):
     # Calculate metric
     meansim = np.mean(sims)
     eval_score = (meansim + (1-bleus))/2
+    totalbleu += bleus
+    totalsim += meansim
 
     # Write results into JSON
     scores = {"meansim": meansim, "meanbleu": bleus, "combined": eval_score}
@@ -55,7 +59,9 @@ for i in range(len(sents)):
 # Finish writing dataset scores into JSON, access with s["total"]["max"|"min"|"mean"]
 wfile.write("],\n\"total\":")
 totalavg /= len(sents)
-totals = {"mean":totalavg}
+totalbleu /= len(sents)
+totalsim /= len(sents)
+totals = {"mean":totalavg, "sim": totalsim, "bleu": totalbleu}
 totals = json.dumps(totals)
 wfile.write(totals)
 wfile.write("}")
