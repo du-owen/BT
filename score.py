@@ -56,7 +56,7 @@ for i in range(len(sents)):
     
     wfile.write(",\n")
 
-# Finish writing dataset scores into JSON, access with s["total"]["max"|"min"|"mean"]
+# Finish writing dataset scores into JSON, access with s["total"]["max"|"min"|"mean"] 
 wfile.write("],\n\"total\":")
 totalavg /= len(sents)
 totalbleu /= len(sents)
