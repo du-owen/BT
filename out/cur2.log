@@ -2220,3 +2220,211 @@ DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai
 DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "Generate 5 new sentences, which are semantically similar but lexically and syntactically divergent from the following: His father was Marcus Messius Rusticus Aemilius Papus, and his mother Cutia Prisca; a brother is attested, Marcus Messius Rusticus Aemilius Afer Cutius, who died young."}]}' message='Post details'
 DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 1156
 DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=13714 request_id=0dc03bcb458c73d666b39f8c3360a1e1 response_code=200
+INFO:root:0
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "Generate 5 new sentences, which are semantically similar but lexically and syntactically divergent from the following: Afterglow is the fifth studio album by Canadian singer-songwriter Sarah McLachlan."}]}' message='Post details'
+DEBUG:urllib3.util.retry:Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openai.com:443
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 1035
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6438 request_id=1130ee3b75f7f06718bc488930415d0b response_code=200
+INFO:root:1
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "Generate 5 new sentences, which are semantically similar but lexically and syntactically divergent from the following: Yetunde Hawanya Tara Price (August 9, 1972 \\u2013 September 14, 2003) was the oldest half-sister of and personal assistant to the leading tennis players Venus and Serena Williams."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 1030
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6480 request_id=e8370f4b8d142a20c2b86f1f26cb06f1 response_code=200
+INFO:root:2
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "Generate 5 new sentences, which are semantically similar but lexically and syntactically divergent from the following: After the Soviet Union cut off diplomatic relations with Israel due to the Six-Day War, the Dutch Embassy in Moscow established an Israel interests\' section which represented Israel in the Soviet Union until diplomatic relations were reestablished in January 1991."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 1771
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10994 request_id=d278e03023a46ce69e02826c07174fa0 response_code=200
+INFO:root:3
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "Generate 5 new sentences, which are semantically similar but lexically and syntactically divergent from the following: The sentence Der neue Teppich ist rot means \\"The new carpet is red\\"."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 530
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=2555 request_id=74a76907de6191caf81345d4c1dcc3e8 response_code=200
+INFO:root:4
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "Generate 5 new sentences, which are semantically similar but lexically and syntactically divergent from the following: He became the head of the community after his teacher (guru) Swami Shankar\\u0101shram died in 1785.Under his administration, the Chitrapur Math acquired land and property."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6036 request_id=ed00483993574e7bda52c23c18c9bf3e response_code=200
+INFO:root:5
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "Generate 5 new sentences, which are semantically similar but lexically and syntactically divergent from the following: The town is surrounded by Rocky View County.History Cochrane was established in 1881 as the Cochrane Ranche, after Matthew Henry Cochrane, a local rancher."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 920
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6416 request_id=5a75eed8b9c1df579d89fc7d81dcc34c response_code=200
+INFO:root:6
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "Generate 5 new sentences, which are semantically similar but lexically and syntactically divergent from the following: The school has a catchment area of the town of Witney and many surrounding villages such as Ducklington and Aston."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 834
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5122 request_id=be4161ac638a0d29b4b56e973a81a1bf response_code=200
+INFO:root:7
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "Generate 5 new sentences, which are semantically similar but lexically and syntactically divergent from the following: Over half of the players on the team were of Polish descent."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 824
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=4724 request_id=9027d4e0824dc1ccdb0b0052dae7137a response_code=200
+INFO:root:8
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "Generate 5 new sentences, which are semantically similar but lexically and syntactically divergent from the following: He is lost, and has become separated from his father.Agents of the Ogamis\' mortal enemies, the Yagy\\u016b, are never far away."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=4524 request_id=a9a38dc2858971333d97df056c894a3c response_code=200
+INFO:root:9
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "Generate 5 new sentences, which are semantically similar but lexically and syntactically divergent from the following: Facilities for experimental research in chemistry were practically non-existent in Berlin at the time, and therefore Landolt left for Heidelberg for a newly founded institute of Robert Bunsen."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 1261
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7381 request_id=a59c486aad1a5e538c4344fcc8c6a420 response_code=200
+INFO:root:0
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "Generate 5 paraphrases, where the first paraphrase has the highest semantic similarity but the lowest lexical divergence and the last paraphrase has the lowest semantic similarity and the hihgest lexical divergence, of the following: Afterglow is the fifth studio album by Canadian singer-songwriter Sarah McLachlan."}]}' message='Post details'
+DEBUG:urllib3.util.retry:Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openai.com:443
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 887
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5875 request_id=086832048f865ca33d8088956ddf20d7 response_code=200
+INFO:root:1
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "Generate 5 paraphrases, where the first paraphrase has the highest semantic similarity but the lowest lexical divergence and the last paraphrase has the lowest semantic similarity and the hihgest lexical divergence, of the following: Yetunde Hawanya Tara Price (August 9, 1972 \\u2013 September 14, 2003) was the oldest half-sister of and personal assistant to the leading tennis players Venus and Serena Williams."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 1049
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6563 request_id=274d39d39f3b570da3d3c1a2cc657a73 response_code=200
+INFO:root:2
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "Generate 5 paraphrases, where the first paraphrase has the highest semantic similarity but the lowest lexical divergence and the last paraphrase has the lowest semantic similarity and the hihgest lexical divergence, of the following: After the Soviet Union cut off diplomatic relations with Israel due to the Six-Day War, the Dutch Embassy in Moscow established an Israel interests\' section which represented Israel in the Soviet Union until diplomatic relations were reestablished in January 1991."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 1918
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=11402 request_id=4d0e409a9224c1e7d1c31685734e3a97 response_code=200
+INFO:root:3
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "Generate 5 paraphrases, where the first paraphrase has the highest semantic similarity but the lowest lexical divergence and the last paraphrase has the lowest semantic similarity and the hihgest lexical divergence, of the following: The sentence Der neue Teppich ist rot means \\"The new carpet is red\\"."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 657
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=3366 request_id=522339532ee6b91493ec1a5b5eecc784 response_code=200
+INFO:root:4
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "Generate 5 paraphrases, where the first paraphrase has the highest semantic similarity but the lowest lexical divergence and the last paraphrase has the lowest semantic similarity and the hihgest lexical divergence, of the following: He became the head of the community after his teacher (guru) Swami Shankar\\u0101shram died in 1785.Under his administration, the Chitrapur Math acquired land and property."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9166 request_id=584a2c956d90fadeda040fca9c0b3f73 response_code=200
+INFO:root:5
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "Generate 5 paraphrases, where the first paraphrase has the highest semantic similarity but the lowest lexical divergence and the last paraphrase has the lowest semantic similarity and the hihgest lexical divergence, of the following: The town is surrounded by Rocky View County.History Cochrane was established in 1881 as the Cochrane Ranche, after Matthew Henry Cochrane, a local rancher."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 838
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5836 request_id=5f07fb6f3f1702acdd22089ef9e431cd response_code=200
+INFO:root:6
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "Generate 5 paraphrases, where the first paraphrase has the highest semantic similarity but the lowest lexical divergence and the last paraphrase has the lowest semantic similarity and the hihgest lexical divergence, of the following: The school has a catchment area of the town of Witney and many surrounding villages such as Ducklington and Aston."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 973
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5957 request_id=fbce449350b190b48e7ef90228d707a7 response_code=200
+INFO:root:7
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "Generate 5 paraphrases, where the first paraphrase has the highest semantic similarity but the lowest lexical divergence and the last paraphrase has the lowest semantic similarity and the hihgest lexical divergence, of the following: Over half of the players on the team were of Polish descent."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 655
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=3187 request_id=f633b5c827a2ad2adb09961ad09b04ae response_code=200
+INFO:root:8
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "Generate 5 paraphrases, where the first paraphrase has the highest semantic similarity but the lowest lexical divergence and the last paraphrase has the lowest semantic similarity and the hihgest lexical divergence, of the following: He is lost, and has become separated from his father.Agents of the Ogamis\' mortal enemies, the Yagy\\u016b, are never far away."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=3152 request_id=49b78457850e1de0fd5475a72bb1232b response_code=200
+INFO:root:9
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "Generate 5 paraphrases, where the first paraphrase has the highest semantic similarity but the lowest lexical divergence and the last paraphrase has the lowest semantic similarity and the hihgest lexical divergence, of the following: Facilities for experimental research in chemistry were practically non-existent in Berlin at the time, and therefore Landolt left for Heidelberg for a newly founded institute of Robert Bunsen."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 1683
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10340 request_id=e8fc7d7322957827ac3d8e2e107fb878 response_code=200
+INFO:root:0
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "On a scale of 1 to 5, where 1 is the most semantically similar but least lexically divergent and 5 is the least semantically similar but most lexically divergent, generate a paraphrase for each scale of the following: Afterglow is the fifth studio album by Canadian singer-songwriter Sarah McLachlan."}]}' message='Post details'
+DEBUG:urllib3.util.retry:Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openai.com:443
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 915
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5427 request_id=818c728e089ee4cf958e3ec1eec28333 response_code=200
+INFO:root:1
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "On a scale of 1 to 5, where 1 is the most semantically similar but least lexically divergent and 5 is the least semantically similar but most lexically divergent, generate a paraphrase for each scale of the following: Yetunde Hawanya Tara Price (August 9, 1972 \\u2013 September 14, 2003) was the oldest half-sister of and personal assistant to the leading tennis players Venus and Serena Williams."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9152 request_id=e80b3e8f587526f06e1925c5021f27a5 response_code=200
+INFO:root:2
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "On a scale of 1 to 5, where 1 is the most semantically similar but least lexically divergent and 5 is the least semantically similar but most lexically divergent, generate a paraphrase for each scale of the following: After the Soviet Union cut off diplomatic relations with Israel due to the Six-Day War, the Dutch Embassy in Moscow established an Israel interests\' section which represented Israel in the Soviet Union until diplomatic relations were reestablished in January 1991."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 1755
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10404 request_id=5370ea26eb9d9d6cb55a1c98dc85cbc8 response_code=200
+INFO:root:3
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "On a scale of 1 to 5, where 1 is the most semantically similar but least lexically divergent and 5 is the least semantically similar but most lexically divergent, generate a paraphrase for each scale of the following: The sentence Der neue Teppich ist rot means \\"The new carpet is red\\"."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 524
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=2817 request_id=a9ef26028e7e39a61c3df315d4d2ad70 response_code=200
+INFO:root:4
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "On a scale of 1 to 5, where 1 is the most semantically similar but least lexically divergent and 5 is the least semantically similar but most lexically divergent, generate a paraphrase for each scale of the following: He became the head of the community after his teacher (guru) Swami Shankar\\u0101shram died in 1785.Under his administration, the Chitrapur Math acquired land and property."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9268 request_id=aa9d2a7806152e30fcce5a12d7a0cab6 response_code=200
+INFO:root:5
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "On a scale of 1 to 5, where 1 is the most semantically similar but least lexically divergent and 5 is the least semantically similar but most lexically divergent, generate a paraphrase for each scale of the following: The town is surrounded by Rocky View County.History Cochrane was established in 1881 as the Cochrane Ranche, after Matthew Henry Cochrane, a local rancher."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 1141
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8253 request_id=29a1531bd11073635334e88a5440b808 response_code=200
+INFO:root:6
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "On a scale of 1 to 5, where 1 is the most semantically similar but least lexically divergent and 5 is the least semantically similar but most lexically divergent, generate a paraphrase for each scale of the following: The school has a catchment area of the town of Witney and many surrounding villages such as Ducklington and Aston."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 945
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5166 request_id=e0b471fa7d98e282a91f0fb9e0e08bf1 response_code=200
+INFO:root:7
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "On a scale of 1 to 5, where 1 is the most semantically similar but least lexically divergent and 5 is the least semantically similar but most lexically divergent, generate a paraphrase for each scale of the following: Over half of the players on the team were of Polish descent."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 673
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=3734 request_id=17fd48709bd436ab1c56edfa00948100 response_code=200
+INFO:root:8
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "On a scale of 1 to 5, where 1 is the most semantically similar but least lexically divergent and 5 is the least semantically similar but most lexically divergent, generate a paraphrase for each scale of the following: He is lost, and has become separated from his father.Agents of the Ogamis\' mortal enemies, the Yagy\\u016b, are never far away."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7627 request_id=360d8ee1b4acb58189e5b7728d8ad5f1 response_code=200
+INFO:root:9
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "On a scale of 1 to 5, where 1 is the most semantically similar but least lexically divergent and 5 is the least semantically similar but most lexically divergent, generate a paraphrase for each scale of the following: Facilities for experimental research in chemistry were practically non-existent in Berlin at the time, and therefore Landolt left for Heidelberg for a newly founded institute of Robert Bunsen."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 1415
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8288 request_id=36c4507f2a7700d72d57a0c8b05d253d response_code=200
+INFO:root:0
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "Generate 5 paraphrases, where the first paraphrase has the highest semantic similarity but the lowest lexical divergence and the last paraphrase has the lowest semantic similarity and the hihgest lexical divergence, of the following: Afterglow is the fifth studio album by Canadian singer-songwriter Sarah McLachlan."}]}' message='Post details'
+DEBUG:urllib3.util.retry:Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openai.com:443
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 821
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5906 request_id=97aa9f70c7b7e707d04d2ca2a0fc4623 response_code=200
+INFO:root:1
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "Generate 5 paraphrases, where the first paraphrase has the highest semantic similarity but the lowest lexical divergence and the last paraphrase has the lowest semantic similarity and the hihgest lexical divergence, of the following: Yetunde Hawanya Tara Price (August 9, 1972 \\u2013 September 14, 2003) was the oldest half-sister of and personal assistant to the leading tennis players Venus and Serena Williams."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 1036
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7142 request_id=201256f7585340fd392aa877c9a01dba response_code=200
+INFO:root:2
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "Generate 5 paraphrases, where the first paraphrase has the highest semantic similarity but the lowest lexical divergence and the last paraphrase has the lowest semantic similarity and the hihgest lexical divergence, of the following: After the Soviet Union cut off diplomatic relations with Israel due to the Six-Day War, the Dutch Embassy in Moscow established an Israel interests\' section which represented Israel in the Soviet Union until diplomatic relations were reestablished in January 1991."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 1456
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9452 request_id=dcefe82b50ae010defa458b36b0f6acb response_code=200
+INFO:root:3
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "Generate 5 paraphrases, where the first paraphrase has the highest semantic similarity but the lowest lexical divergence and the last paraphrase has the lowest semantic similarity and the hihgest lexical divergence, of the following: The sentence Der neue Teppich ist rot means \\"The new carpet is red\\"."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 619
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=3560 request_id=9a9e00fc03b8845ab1a33249aaaf6ccb response_code=200
+INFO:root:4
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "Generate 5 paraphrases, where the first paraphrase has the highest semantic similarity but the lowest lexical divergence and the last paraphrase has the lowest semantic similarity and the hihgest lexical divergence, of the following: He became the head of the community after his teacher (guru) Swami Shankar\\u0101shram died in 1785.Under his administration, the Chitrapur Math acquired land and property."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10098 request_id=a04339d71099ee2868ad42b8a5d66f9d response_code=200
+INFO:root:5
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "Generate 5 paraphrases, where the first paraphrase has the highest semantic similarity but the lowest lexical divergence and the last paraphrase has the lowest semantic similarity and the hihgest lexical divergence, of the following: The town is surrounded by Rocky View County.History Cochrane was established in 1881 as the Cochrane Ranche, after Matthew Henry Cochrane, a local rancher."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 675
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=4752 request_id=4ab07782efab9d539169968b6d3ac106 response_code=200
+INFO:root:6
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "Generate 5 paraphrases, where the first paraphrase has the highest semantic similarity but the lowest lexical divergence and the last paraphrase has the lowest semantic similarity and the hihgest lexical divergence, of the following: The school has a catchment area of the town of Witney and many surrounding villages such as Ducklington and Aston."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 958
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5945 request_id=14e947baa5d9455a4506cfa4b714b227 response_code=200
+INFO:root:7
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "Generate 5 paraphrases, where the first paraphrase has the highest semantic similarity but the lowest lexical divergence and the last paraphrase has the lowest semantic similarity and the hihgest lexical divergence, of the following: Over half of the players on the team were of Polish descent."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 669
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=3509 request_id=a97dfdc1b510469f28f071caf5e3f59d response_code=200
+INFO:root:8
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "Generate 5 paraphrases, where the first paraphrase has the highest semantic similarity but the lowest lexical divergence and the last paraphrase has the lowest semantic similarity and the hihgest lexical divergence, of the following: He is lost, and has become separated from his father.Agents of the Ogamis\' mortal enemies, the Yagy\\u016b, are never far away."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=4345 request_id=0bd12ad805e1fba6d34f0cc8326b3a4c response_code=200
+INFO:root:9
+DEBUG:openai:message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG:openai:api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "Generate 5 paraphrases, where the first paraphrase has the highest semantic similarity but the lowest lexical divergence and the last paraphrase has the lowest semantic similarity and the hihgest lexical divergence, of the following: Facilities for experimental research in chemistry were practically non-existent in Berlin at the time, and therefore Landolt left for Heidelberg for a newly founded institute of Robert Bunsen."}]}' message='Post details'
+DEBUG:urllib3.connectionpool:https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 1433
+DEBUG:openai:message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9421 request_id=5d62d809ce1fd44e7fcf538d851c4758 response_code=200

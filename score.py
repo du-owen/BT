@@ -7,11 +7,11 @@ import numpy as np
 
 model = SimCSE("princeton-nlp/sup-simcse-roberta-large")
 
-file = open("parap_trunc2.json","r")
+file = open("parap_trunc5.json","r")
 j = file.read()
 sents = json.loads(j)
 
-wfile = open("parap_scores2.json","w")
+wfile = open("parap_scores5.json","w")
 wfile.write("{\"scores\":")
 wfile.write("[")
 
@@ -43,7 +43,7 @@ for i in range(len(sents)):
     totalsim += meansim
 
     # Write results into JSON
-    scores = {"meansim": meansim, "meanbleu": bleus, "combined": eval_score}
+    scores = {"meansim": meansim, "meanbleu": bleus, "combined": eval_score, "simscores": sims}
     scores = json.dumps(scores)
     wfile.write(scores)
 
