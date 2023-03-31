@@ -14,6 +14,6 @@
 set -o errexit
 
 source /itet-stor/owendu/net_scratch/miniconda3/bin/activate env
-srun python paraphrases150k/helper.py
+srun python temp.py
 echo finished at: `date`
 exit 0;

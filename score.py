@@ -7,15 +7,15 @@ import numpy as np
 
 model = SimCSE("princeton-nlp/sup-simcse-roberta-large")
 
-file = open("paraphrases150k/parap_trunc150k0.json","r")
+file = open("paraphrases150k/temp.json","r")
 j = file.read()
-sents = json.loads(j)
+sents = json.loads(j)[:1000]
 
 wfile = open("paraphrases150k/parap_scores150k0.json","w")
 wfile.write("{\"scores\":")
 wfile.write("[")
 
-dataset = load_dataset("text", data_files="wiki_datasets/wiki1/wiki1_1.txt", cache_dir="~/transformers_cache")["train"][:]["text"]
+dataset = load_dataset("text", data_files="wiki_datasets/wiki1_1_trunc.txt", cache_dir="~/transformers_cache")["train"][:]["text"]
 
 totalavg = 0
 totalbleu = 0
