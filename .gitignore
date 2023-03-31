@@ -12,3 +12,8 @@ wiki_datasets/wiki3/wiki3_3.txt
 wiki_datasets/wiki2/wiki2_1.txt
 wiki_datasets/wiki2/wiki2_2.txt
 wiki_datasets/wiki2/wiki2_3.txt
+prompts/parap_trunc5.json
+out/pp150k0.log
+out/cur.log
+parap_trunc150k.json
+parap_scores150k.json

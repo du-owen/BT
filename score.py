@@ -7,15 +7,15 @@ import numpy as np
 
 model = SimCSE("princeton-nlp/sup-simcse-roberta-large")
 
-file = open("parap_trunc5.json","r")
+file = open("paraphrases150k/parap_trunc150k0.json","r")
 j = file.read()
 sents = json.loads(j)
 
-wfile = open("parap_scores5.json","w")
+wfile = open("paraphrases150k/parap_scores150k0.json","w")
 wfile.write("{\"scores\":")
 wfile.write("[")
 
-dataset = load_dataset("text", data_files="wiki_trunc_new.txt", cache_dir="~/transformers_cache")
+dataset = load_dataset("text", data_files="wiki_datasets/wiki1/wiki1_1.txt", cache_dir="~/transformers_cache")["train"][:]["text"]
 
 totalavg = 0
 totalbleu = 0
@@ -23,8 +23,8 @@ totalsim = 0
 
 for i in range(len(sents)):
 
-    orig = dataset["train"][i]["text"]
-    paraphrases = sents[i][:5]
+    orig = dataset[i]
+    paraphrases = sents[i]
 
     # Calculate similarity and normalize values
     sims = model.similarity([orig],paraphrases)[0]
