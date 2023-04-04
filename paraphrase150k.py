@@ -4,10 +4,12 @@ import json
 import logging
 import time
 from multiprocessing import Pool
+import os
 
 
-job = 0 # each job processes 15k paraphrases
+job = int(os.environ.get("SLURM_ARRAY_TASK_ID")) # each job processes 15k paraphrases
 
+# returns list of paraphrases and list of indices where paraphrase wasn't possible (handled later in helper.py)
 def pphrases(interval):
     start, end = interval
     results = []
@@ -66,11 +68,13 @@ def main():
     intervalsize=1000 # 1000 paraphrases per process
     intervals = [(i,i+intervalsize) for i in range(job*15000+0,job*15000+numProcesses*intervalsize,intervalsize)] # interval range depends on job number
 
+    # every process works on a separate interval
     with Pool(processes=numProcesses,initializer=loginit) as pool:
         results = pool.map(pphrases, intervals)
         pool.close()
         pool.join()
 
+    # parse result, paraphrases contains paraphrases, indices contains lines where paraphrase wasn't possible, handled in helper.py
     paraphrases = [x[0] for x in results]
     paraphrases = [item for sublist in paraphrases for item in sublist]
 
@@ -81,10 +85,9 @@ def main():
     file.write(jsonr)
     file.close()
 
-    ifile = open("paraphrases150k/badIndices{}.json".format(job),"w")
-    jsonr = json.dumps(indices)
-    ifile.write(jsonr)
-    ifile.close()
+    with open("paraphrases150k/badIndices{}.json".format(job),"w") as ifile:
+        jsonr = json.dumps(indices)
+        ifile.write(jsonr)
 
 def loginit():
     # Log API requests
