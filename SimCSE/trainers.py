@@ -426,6 +426,7 @@ class CLTrainer(Trainer):
         self.control = self.callback_handler.on_train_begin(self.args, self.state, self.control)
 
         # added start
+        # for each dataset create a dataloader
         if hasattr(self,"datasetlist"):
             temp = self.train_dataset
             for i in range(len(self.datasetlist)):
@@ -441,6 +442,7 @@ class CLTrainer(Trainer):
                 for _ in train_dataloader:
                     break
             # added start
+            # don't know if this is neccessary
             if hasattr(self,"datasetlist"):
                 for epoch in range(epochs_trained):
                     for _ in self.datasetlist[epoch]:
@@ -451,6 +453,7 @@ class CLTrainer(Trainer):
             if isinstance(train_dataloader, DataLoader) and isinstance(train_dataloader.sampler, DistributedSampler):
                 train_dataloader.sampler.set_epoch(epoch)
             # added start
+            # if in paraphrase mode then we set dataset depending on epoch
             if hasattr(self,"datasetlist"):
                 epoch_iterator = self.datasetlist[epoch]
             else:

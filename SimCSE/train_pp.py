@@ -534,6 +534,8 @@ def main():
     data_collator = default_data_collator if data_args.pad_to_max_length else OurDataCollatorWithPadding(tokenizer)
 
     # added start
+
+    # datasetlist is list which we pass to the trainer, contains 5 datasets (one for each paraphrase)
     datasetlist=[]
     
     datasets = []
@@ -542,12 +544,14 @@ def main():
         pphrases = pfile.read()
         pphrases = json.loads(pphrases)
     
+    # datasets now contains a dataframe with 2 columns (text and paraphrases)
     for i in range(5):
         pp = [x[i] for x in pphrases]
         ds = load_dataset("text", data_files=data_files, cache_dir="./data/")
         ds = ds["train"].add_column("paraphrases", pp)
         datasets.append(ds)
     
+    # prepare the features exactly like they do in the code, first set sent cnames and then prepare_features
     column_names = datasets[0].column_names
     
     sent0_cname = column_names[0]
@@ -573,6 +577,7 @@ def main():
         
     )
     # added start
+    # pass datasetlist to trainer
     trainer.datasetlist=datasetlist
     # added end
     trainer.model_args = model_args
