@@ -1,0 +1,45 @@
+Average lenth of sentences:
+
+150k sents dataset: 25.94214
+wiki 1m for simcse: 22.554246
+
+STS12:
+MSRpar: 20.653333333333332
+MSRvid: 7.638 (very short sentences)
+SMTeuroparl: 12.327886710239651
+OnWn: 8.801333333333334 (phrases)
+SMTnews: 13.487468671679197
+
+STS13:
+FNWN: 23.33862433862434
+headlines: 7.685333333333333
+OnWN: 8.156862745098039 (short phrases)
+
+STS14:
+deft-forum: 10.147777777777778
+deft-news: 17.241666666666667
+headlines: 7.818
+images: 10.171333333333333 (descriptions of images)
+OnWN: 8.846666666666666
+tweet-news: 12.064666666666668
+
+STS15:
+answers-forums: 17.64975
+answers-students: 10.832666666666666
+belief: 14.9555
+headlines: 7.985333333333333
+images: 10.583333333333334
+
+STS16:
+answer-answer: 11.142175572519085
+headlines: 8.172897196261681
+plagiarism: 15.220692368214005
+postediting: 23.548676604806815
+question-question: 11.67556270096463
+
+STSBenchmark a collection of sentences and phrases from STS12-17
+
+SICKRelatedness:
+test_annotated: 9.661525974025974
+train: 9.67462786047545
+trial: 9.86626746506986
