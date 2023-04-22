@@ -247,6 +247,8 @@ class OurTrainingArguments(TrainingArguments):
 
 
 def main():
+    
+
     # See all possible arguments in src/transformers/training_args.py
     # or by passing the --help flag to this script.
     # We now keep distinct sets of args, for a cleaner separation of concerns.
@@ -257,7 +259,17 @@ def main():
         # let's parse it to get our arguments.
         model_args, data_args, training_args = parser.parse_json_file(json_file=os.path.abspath(sys.argv[1]))
     else:
-        model_args, data_args, training_args = parser.parse_args_into_dataclasses()
+        model_args, data_args, training_args,_ = parser.parse_args_into_dataclasses(return_remaining_strings=True)
+
+    # added start
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--dropout_val', type=float, default=0.1, help="dropout when training")
+    parser.add_argument('--paraphrase_mode', type=bool, default=False, help="use paraphrases as data augmentation")
+    args, _ = parser.parse_known_args()
+    dropout_val = args.dropout_val
+    paraphrase_mode = args.paraphrase_mode
+    # added end
 
     if (
         os.path.exists(training_args.output_dir)
@@ -282,6 +294,7 @@ def main():
         f"Process rank: {training_args.local_rank}, device: {training_args.device}, n_gpu: {training_args.n_gpu}"
         + f" distributed training: {bool(training_args.local_rank != -1)}, 16-bits training: {training_args.fp16}"
     )
+    
     # Set the verbosity to info of the Transformers logger (on main process only):
     if is_main_process(training_args.local_rank):
         transformers.utils.logging.set_verbosity_info()
@@ -324,6 +337,10 @@ def main():
         "cache_dir": model_args.cache_dir,
         "revision": model_args.model_revision,
         "use_auth_token": True if model_args.use_auth_token else None,
+        # added start
+        "hidden_dropout_prob": dropout_val,
+        "attention_probs_dropout_prob": dropout_val
+        # added end
     }
     if model_args.config_name:
         config = AutoConfig.from_pretrained(model_args.config_name, **config_kwargs)
@@ -533,41 +550,6 @@ def main():
 
     data_collator = default_data_collator if data_args.pad_to_max_length else OurDataCollatorWithPadding(tokenizer)
 
-    # added start
-
-    # datasetlist is list which we pass to the trainer, contains 5 datasets (one for each paraphrase)
-    datasetlist=[]
-    
-    datasets = []
-
-    with open("../../Paraphrase/paraphrases150k/parap_trunc150k.json","r") as pfile:
-        pphrases = pfile.read()
-        pphrases = json.loads(pphrases)
-    
-    # datasets now contains a dataframe with 2 columns (text and paraphrases)
-    for i in range(5):
-        pp = [x[i] for x in pphrases]
-        ds = load_dataset("text", data_files=data_files, cache_dir="./data/")
-        ds = ds["train"].add_column("paraphrases", pp)
-        datasets.append(ds)
-    
-    # prepare the features exactly like they do in the code, first set sent cnames and then prepare_features
-    column_names = datasets[0].column_names
-    
-    sent0_cname = column_names[0]
-    sent1_cname = column_names[1]
-
-    for i in range(5):
-        datasetlist.append(datasets[i].map(
-                prepare_features,
-                batched=True,
-                num_proc=data_args.preprocessing_num_workers,
-                remove_columns=column_names,
-                load_from_cache_file=not data_args.overwrite_cache,
-            ))
-
-    # added end
-
     trainer = CLTrainer(
         model=model,
         args=training_args,
@@ -577,8 +559,43 @@ def main():
         
     )
     # added start
-    # pass datasetlist to trainer
-    trainer.datasetlist=datasetlist
+    if paraphrase_mode:
+        datasetlist=[]
+        
+        datasets = []
+        
+        # read files with paraphrases
+        with open("../Paraphrase/paraphrases150k/parap_trunc150k.json","r") as pfile:
+            pphrases = pfile.read()
+            pphrases = json.loads(pphrases)
+        
+        # dataset[i] for i=0,..,4 contains dataset with columns ["text", "paraphrases"]
+        # where text contains original sentences and paraphrases the i-th paraphrase for every sentence
+        for i in range(5):
+            pp = [x[i] for x in pphrases]
+            ds = load_dataset("text", data_files=data_files, cache_dir="./data/")
+            ds = ds["train"].add_column("paraphrases", pp)
+            datasets.append(ds)
+        
+        # prepare values for prepare_features
+        column_names = datasets[0].column_names
+        
+        sent0_cname = column_names[0] # text
+        sent1_cname = column_names[1] # paraphrases
+
+        # let l be len(original dataset), datasetlist[i] now contains the original sentences
+        # from index 0 to l-1, and i-th paraphrases from index l to 2l-1
+        for i in range(5):
+            datasetlist.append(datasets[i].map(
+                    prepare_features,
+                    batched=True,
+                    num_proc=data_args.preprocessing_num_workers,
+                    remove_columns=column_names,
+                    load_from_cache_file=not data_args.overwrite_cache,
+                ))
+
+        # pass our new datasets to trainer
+        trainer.datasetlist=datasetlist
     # added end
     trainer.model_args = model_args
 
