@@ -1,0 +1,194 @@
+Running on host: tikgpu05
+In directory: /itet-stor/owendu/net_scratch/Paraphrase/FastChat/paraphrase
+Starting on: Thu May 11 15:04:30 CEST 2023
+SLURM_JOB_ID: 617939
+/itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/python3.8/site-packages/bitsandbytes/cuda_setup/main.py:145: UserWarning: Found duplicate ['libcudart.so', 'libcudart.so.11.0', 'libcudart.so.12.0'] files: {PosixPath('/itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/libcudart.so'), PosixPath('/itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/libcudart.so.11.0')}.. We'll flip a coin and try one of these, in order to fail forward.
+Either way, this might cause trouble in the future:
+If you get `CUDA error: invalid device function` errors, the above might be the cause and the solution is to make sure only one ['libcudart.so', 'libcudart.so.11.0', 'libcudart.so.12.0'] in the paths that we search based on your env.
+  warn(msg)
+/itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/python3.8/site-packages/bitsandbytes/cuda_setup/main.py:145: UserWarning: WARNING: Compute capability < 7.5 detected! Only slow 8-bit matmul is supported for your GPU!
+  warn(msg)
+2023-05-11 15:05:36,231	INFO worker.py:1616 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8265 [39m[22m
+[2m[36m(pid=160126)[0m /itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/python3.8/site-packages/bitsandbytes/cuda_setup/main.py:145: UserWarning: Found duplicate ['libcudart.so', 'libcudart.so.11.0', 'libcudart.so.12.0'] files: {PosixPath('/itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/libcudart.so'), PosixPath('/itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/libcudart.so.11.0')}.. We'll flip a coin and try one of these, in order to fail forward.
+[2m[36m(pid=160126)[0m Either way, this might cause trouble in the future:
+[2m[36m(pid=160126)[0m If you get `CUDA error: invalid device function` errors, the above might be the cause and the solution is to make sure only one ['libcudart.so', 'libcudart.so.11.0', 'libcudart.so.12.0'] in the paths that we search based on your env.
+[2m[36m(pid=160126)[0m   warn(msg)
+[2m[36m(pid=160126)[0m /itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/python3.8/site-packages/bitsandbytes/cuda_setup/main.py:145: UserWarning: WARNING: Compute capability < 7.5 detected! Only slow 8-bit matmul is supported for your GPU!
+[2m[36m(pid=160126)[0m   warn(msg)
+[2m[36m(get_model_answers pid=160126)[0m Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]
+[2m[36m(get_model_answers pid=160126)[0m Loading checkpoint shards:  33%|███▎      | 1/3 [00:05<00:10,  5.25s/it]
+[2m[36m(get_model_answers pid=160126)[0m Loading checkpoint shards:  67%|██████▋   | 2/3 [00:10<00:05,  5.27s/it]
+[2m[36m(get_model_answers pid=160126)[0m Loading checkpoint shards: 100%|██████████| 3/3 [00:14<00:00,  4.47s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:14<00:00,  4.68s/it]
+[2m[36m(get_model_answers pid=160126)[0m   0%|          | 0/9 [00:00<?, ?it/s]
+[2m[36m(get_model_answers pid=160126)[0m /itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/python3.8/site-packages/bitsandbytes/autograd/_functions.py:318: UserWarning: MatMul8bitLt: inputs will be cast from torch.float32 to float16 during quantization
+[2m[36m(get_model_answers pid=160126)[0m   warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+[2m[36m(get_model_answers pid=160126)[0m   0%|          | 0/9 [00:02<?, ?it/s]
+
+===================================BUG REPORT===================================
+Welcome to bitsandbytes. For bug reports, please run
+
+python -m bitsandbytes
+
+ and submit this information together with your error trace to: https://github.com/TimDettmers/bitsandbytes/issues
+================================================================================
+bin /itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/python3.8/site-packages/bitsandbytes/libbitsandbytes_cuda113_nocublaslt.so
+CUDA SETUP: CUDA runtime path found: /itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/libcudart.so
+CUDA SETUP: Highest compute capability among GPUs detected: 7.0
+CUDA SETUP: Detected CUDA version 113
+CUDA SETUP: Loading binary /itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/python3.8/site-packages/bitsandbytes/libbitsandbytes_cuda113_nocublaslt.so...
+[2m[36m(pid=160126)[0m 
+[2m[36m(pid=160126)[0m ===================================BUG REPORT===================================
+[2m[36m(pid=160126)[0m Welcome to bitsandbytes. For bug reports, please run
+[2m[36m(pid=160126)[0m 
+[2m[36m(pid=160126)[0m python -m bitsandbytes
+[2m[36m(pid=160126)[0m 
+[2m[36m(pid=160126)[0m  and submit this information together with your error trace to: https://github.com/TimDettmers/bitsandbytes/issues
+[2m[36m(pid=160126)[0m ================================================================================
+[2m[36m(pid=160126)[0m bin /itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/python3.8/site-packages/bitsandbytes/libbitsandbytes_cuda113_nocublaslt.so
+[2m[36m(pid=160126)[0m CUDA SETUP: CUDA runtime path found: /itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/libcudart.so
+[2m[36m(pid=160126)[0m CUDA SETUP: Highest compute capability among GPUs detected: 7.0
+[2m[36m(pid=160126)[0m CUDA SETUP: Detected CUDA version 113
+[2m[36m(pid=160126)[0m CUDA SETUP: Loading binary /itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/python3.8/site-packages/bitsandbytes/libbitsandbytes_cuda113_nocublaslt.so...
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /usr/itetnas04/data-scratch-01/owendu/data/Paraphrase/FastChat/paraphrase/.. │
+│ /fastchat/eval/get_model_answer.py:92 in <module>                            │
+│                                                                              │
+│   89 │   args = parser.parse_args()                                          │
+│   90 │                                                                       │
+│   91 │   ray.init(num_cpus=1)                                                │
+│ ❱ 92 │   run_eval(                                                           │
+│   93 │   │   args.model_path,                                                │
+│   94 │   │   args.model_id,                                                  │
+│   95 │   │   args.question_file,                                             │
+│                                                                              │
+│ /usr/itetnas04/data-scratch-01/owendu/data/Paraphrase/FastChat/paraphrase/.. │
+│ /fastchat/eval/get_model_answer.py:33 in run_eval                            │
+│                                                                              │
+│   30 │                                                                       │
+│   31 │   ans_jsons = []                                                      │
+│   32 │   for ans_handle in ans_handles:                                      │
+│ ❱ 33 │   │   ans_jsons.extend(ray.get(ans_handle))                           │
+│   34 │                                                                       │
+│   35 │   with open(os.path.expanduser(answer_file), "w") as ans_file:        │
+│   36 │   │   for line in ans_jsons:                                          │
+│                                                                              │
+│ /itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/python3.8/site-pack │
+│ ages/ray/_private/client_mode_hook.py:105 in wrapper                         │
+│                                                                              │
+│   102 │   │   │   # we only convert init function if RAY_CLIENT_MODE=1       │
+│   103 │   │   │   if func.__name__ != "init" or is_client_mode_enabled_by_de │
+│   104 │   │   │   │   return getattr(ray, func.__name__)(*args, **kwargs)    │
+│ ❱ 105 │   │   return func(*args, **kwargs)                                   │
+│   106 │                                                                      │
+│   107 │   return wrapper                                                     │
+│   108                                                                        │
+│                                                                              │
+│ /itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/python3.8/site-pack │
+│ ages/ray/_private/worker.py:2521 in get                                      │
+│                                                                              │
+│   2518 │   │   │   │   if isinstance(value, ray.exceptions.ObjectLostError): │
+│   2519 │   │   │   │   │   worker.core_worker.dump_object_store_memory_usage │
+│   2520 │   │   │   │   if isinstance(value, RayTaskError):                   │
+│ ❱ 2521 │   │   │   │   │   raise value.as_instanceof_cause()                 │
+│   2522 │   │   │   │   else:                                                 │
+│   2523 │   │   │   │   │   raise value                                       │
+│   2524                                                                       │
+╰──────────────────────────────────────────────────────────────────────────────╯
+RayTaskError(OutOfMemoryError): [36mray::get_model_answers()[39m (pid=160126, 
+ip=129.132.190.223)
+  File 
+"/itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/python3.8/site-package
+s/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "../fastchat/eval/get_model_answer.py", line 60, in get_model_answers
+    output_ids = model.generate(
+  File 
+"/itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/python3.8/site-package
+s/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File 
+"/itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/python3.8/site-package
+s/transformers/generation/utils.py", line 1485, in generate
+    return self.sample(
+  File 
+"/itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/python3.8/site-package
+s/transformers/generation/utils.py", line 2524, in sample
+    outputs = self(
+  File 
+"/itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/python3.8/site-package
+s/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File 
+"/itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/python3.8/site-package
+s/accelerate/hooks.py", line 165, in new_forward
+    output = old_forward(*args, **kwargs)
+  File 
+"/itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/python3.8/site-package
+s/transformers/models/llama/modeling_llama.py", line 687, in forward
+    outputs = self.model(
+  File 
+"/itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/python3.8/site-package
+s/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File 
+"/itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/python3.8/site-package
+s/accelerate/hooks.py", line 165, in new_forward
+    output = old_forward(*args, **kwargs)
+  File 
+"/itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/python3.8/site-package
+s/transformers/models/llama/modeling_llama.py", line 577, in forward
+    layer_outputs = decoder_layer(
+  File 
+"/itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/python3.8/site-package
+s/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File 
+"/itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/python3.8/site-package
+s/accelerate/hooks.py", line 165, in new_forward
+    output = old_forward(*args, **kwargs)
+  File 
+"/itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/python3.8/site-package
+s/transformers/models/llama/modeling_llama.py", line 305, in forward
+    hidden_states = self.mlp(hidden_states)
+  File 
+"/itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/python3.8/site-package
+s/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File 
+"/itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/python3.8/site-package
+s/accelerate/hooks.py", line 165, in new_forward
+    output = old_forward(*args, **kwargs)
+  File 
+"/itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/python3.8/site-package
+s/transformers/models/llama/modeling_llama.py", line 157, in forward
+    return self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+  File 
+"/itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/python3.8/site-package
+s/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File 
+"/itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/python3.8/site-package
+s/accelerate/hooks.py", line 165, in new_forward
+    output = old_forward(*args, **kwargs)
+  File 
+"/itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/python3.8/site-package
+s/bitsandbytes/nn/modules.py", line 320, in forward
+    out = bnb.matmul(x, self.weight, bias=self.bias, state=self.state)
+  File 
+"/itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/python3.8/site-package
+s/bitsandbytes/autograd/_functions.py", line 500, in matmul
+    return MatMul8bitLt.apply(A, B, out, bias, state)
+  File 
+"/itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/python3.8/site-package
+s/torch/autograd/function.py", line 506, in apply
+    return super().apply(*args, **kwargs)  # type: ignore[misc]
+  File 
+"/itet-stor/owendu/net_scratch/miniconda3/envs/vicuna/lib/python3.8/site-package
+s/bitsandbytes/autograd/_functions.py", line 382, in forward
+    state.subB = (outliers * state.SCB.view(-1, 1) / 
+127.0).t().contiguous().to(A.dtype)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 270.00 MiB 
+(GPU 0; 31.75 GiB total capacity; 29.27 GiB already allocated; 141.50 MiB free; 
+30.74 GiB reserved in total by PyTorch) If reserved memory is >> allocated 
+memory try setting max_split_size_mb to avoid fragmentation.  See documentation 
+for Memory Management and PYTORCH_CUDA_ALLOC_CONF
