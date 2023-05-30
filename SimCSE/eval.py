@@ -36,9 +36,19 @@ tr.add_row(["wiki150k",0.0,10,"paraphrase",3e-5,64,69.84, 81.43, 72.54, 78.94, 7
 tr.add_row(["wiki150k",0.0,15,"paraphrase",3e-5,64,70.37, 81.16, 72.47, 80.7, 79.96, 79.04, 76.03, 77.1])
 tr.add_row(["wiki150k",0.0,20,"paraphrase",3e-5,64,68.94, 78.18, 71.29, 78.75, 79.74, 78.68, 73.4, 75.57])
 
+tvic = PrettyTable(["dataset","dropout","epochs","mode","lr","batchsize","STS12","STS13","STS14","STS15","STS16","STSBenchmark","SICKRelatedness","Avg","ChatGPT Avg"])
+
+tvic.add_row(["vicuna",0.0,10,"bert",3e-5,64,71.12, 78.57, 72.78, 79.02, 78.97, 76.92, 70.0, 75.34,75.42])
+tvic.add_row(["vicuna",0.1,20,"bert",3e-5,64,70.11, 78.7, 71.59, 77.31, 78.51, 76.36, 71.42, 74.86,75.09])
+tvic.add_row(["vicuna",0.1,5,"roberta",3e-5,64,69.46, 78.98, 71.09, 78.74, 79.01, 78.8, 72.53, 75.52,77.12])
+tvic.add_row(["vicuna",0.0,15,"roberta",3e-5,64,69.39, 79.83, 71.48, 78.94, 78.35, 77.61, 72.97, 75.51,77.1])
+
+
 with open('evals_table.txt', 'w') as f:
     print("dataset: wiki is own dataset, simcse is simcse dataset", file=f)
     print("mode: unsup simcse or paraphrase", file=f)
     print(t, file=f)
     print("following with roberta-base:",file=f)
     print(tr,file=f)
+    print("following with vicuna generated paraphrases",file=f)
+    print(tvic,file=f)

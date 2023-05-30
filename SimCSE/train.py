@@ -265,7 +265,8 @@ def main():
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument('--dropout_val', type=float, default=0.1, help="dropout when training")
-    parser.add_argument('--paraphrase_mode', type=bool, default=False, help="use paraphrases as data augmentation")
+    parser.add_argument('--paraphrase_mode', action='store_true', default=False, help="use paraphrases as data augmentation")
+    parser.add_argument('--paraphrase_file')
     args, _ = parser.parse_known_args()
     dropout_val = args.dropout_val
     paraphrase_mode = args.paraphrase_mode
@@ -565,7 +566,7 @@ def main():
         datasets = []
         
         # read files with paraphrases
-        with open("../Paraphrase/paraphrases150k/parap_trunc150k.json","r") as pfile:
+        with open(args.paraphrase_file,"r") as pfile:
             pphrases = pfile.read()
             pphrases = json.loads(pphrases)
         

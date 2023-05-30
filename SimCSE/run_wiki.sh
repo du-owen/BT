@@ -33,12 +33,12 @@ export OMP_NUM_THREADS=4
 
 # Use distributed data parallel
 # If you only want to use one card, uncomment the following line and comment the line with "torch.distributed.launch"
-source /itet-stor/owendu/net_scratch/miniconda3/bin/activate env
+source /itet-stor/owendu/net_scratch/miniconda3/bin/activate simcse
 python -m torch.distributed.launch --nproc_per_node $NUM_GPU --master_port $PORT_ID train.py \
-    --model_name_or_path bert-base-uncased \
-    --train_file  data/wiki1_1_150k.txt \
-    --output_dir result/pp/wiki_150k_20_no_dropout \
-    --num_train_epochs 20 \
+    --model_name_or_path roberta-base \
+    --train_file  data/wiki_vicuna.txt \
+    --output_dir result/vicuna/roberta_15_nodp \
+    --num_train_epochs 15 \
     --per_device_train_batch_size 64 \
     --learning_rate 3e-5 \
     --max_seq_length 32 \
@@ -53,8 +53,9 @@ python -m torch.distributed.launch --nproc_per_node $NUM_GPU --master_port $PORT
     --do_train \
     --do_eval \
     --fp16 \
-    --paraphrase_mode True \
     --dropout_val 0.0 \
+    --paraphrase_mode \
+    --paraphrase_file /itet-stor/owendu/net_scratch/Paraphrase/FastChat/pps/pp.json \
     "$@"
 echo finished at: `date`
 exit 0;
