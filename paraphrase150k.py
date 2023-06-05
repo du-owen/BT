@@ -16,7 +16,7 @@ def pphrases(interval):
     badIndices = []
     for i in range(start,end):
         logging.info(i)
-        # API request, if we get API error then we try again after sleeping 10s (not checked if it 100% works)
+
         err = True
         while err:
             try:
@@ -56,17 +56,19 @@ def main():
 
 
     # Create json file for paraphrased sentences, access j-th paraphrase for i-th sentence with s[i][j]
-    file = open("paraphrases150k/parap_trunc150k{}.json".format(job),"w")
+    file = open("pp1m/pp{}.json".format(job),"w")
 
     # Load sentences
     global dataset
     global prompt
-    dataset = load_dataset("text", data_files="wiki_datasets/wiki1/wiki1_1.txt", cache_dir="~/transformers_cache")["train"][:150000]["text"]
+    dataset = load_dataset("text", data_files="wiki_datasets/wiki1/wiki1_1.txt", cache_dir="~/transformers_cache")["train"][:]["text"]
     prompt = "Generate 5 new sentences, which are semantically similar but lexically and syntactically divergent from the following: "
     
     numProcesses = 15
-    intervalsize=1000 # 1000 paraphrases per process
-    intervals = [(i,i+intervalsize) for i in range(job*15000+0,job*15000+numProcesses*intervalsize,intervalsize)] # interval range depends on job number
+    intervalsize = 1000 # 1000 paraphrases per process
+    jobsize = numProcesses * intervalsize
+
+    intervals = [(i,i+intervalsize) for i in range(job*jobsize,job*jobsize+jobsize,intervalsize)] # interval range depends on job number
 
     # every process works on a separate interval
     with Pool(processes=numProcesses,initializer=loginit) as pool:
@@ -85,13 +87,13 @@ def main():
     file.write(jsonr)
     file.close()
 
-    with open("paraphrases150k/badIndices{}.json".format(job),"w") as ifile:
+    with open("pp1m/badIndices{}.json".format(job),"w") as ifile:
         jsonr = json.dumps(indices)
         ifile.write(jsonr)
 
 def loginit():
     # Log API requests
-    logging.basicConfig(filename='out/pp150k{}.log'.format(job), level = logging.DEBUG)
+    logging.basicConfig(filename='out/pp1m{}.log'.format(job), level = logging.DEBUG)
 
 
 if __name__ == "__main__":
