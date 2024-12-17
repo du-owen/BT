@@ -10,8 +10,8 @@ job = 0
 
 prompt = "Generate 5 new sentences, which are semantically similar but lexically and syntactically divergent from the following: "
 
-openai.organization = "org-ttEh7YxIVc0VaC1LXt8xVuIO"
-openai.api_key = "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"
+openai.organization = ""
+openai.api_key = ""
 
 # file with indices where paraphrasing failed, need to create paraphrases of new sentences, insert them at the right place and update the original sentence file
 with open("paraphrases150k/badIndices{}.json".format(job),"r") as ifile:
